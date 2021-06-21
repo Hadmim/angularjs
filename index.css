@@ -1,0 +1,70 @@
+
+
+
+body{
+
+	background:#fff;
+	font-family: 'Raleway',sans-serif;
+	
+	background:url('cp8.jpg');
+	background-size:cover;
+	background-repeat: no-repeat;
+	
+	
+
+}
+
+  #wrapper {
+	background:rgba(0,0,0,0.6);
+    margin-left:auto;
+    margin-right:auto;
+    width:960px;
+}
+
+
+
+.banner .navbar-brand{
+	color: #fff;
+	font-size:1.8em;
+	font-weight: 700;
+	margin-left: 10%;
+	height: 100%;
+}
+.banner .nav{
+	height: 100%;
+	margin-right:10%; 
+}
+.banner .nav li a{
+	color:rgb(73, 165, 226);
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.banner .info{
+	margin-top:15%;
+	transform: translateY(-15%);
+}
+.banner .info h1{
+	font-size: 2.5em;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 2px;
+}
+.banner .info p{
+	font-size: 2em;
+	font-weight: 500;
+	color: rgb(73, 165, 226);
+	letter-spacing: 2px;
+}
+.banner .info a{
+	margin-left:50%;
+	transform: translateX(-50%);
+	color: #fff;
+	background:cornflowerblue;
+	padding:10px 20px; 
+	font-size: 1.5em;
+	font-weight: 600;
+	border-radius: 1000px;
+}
+.banner .info a:hover{
+	background: #1e6fe9;
+}

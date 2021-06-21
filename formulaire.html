@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+  <link href="fonts/css.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="stylesheet" type="text/css" href="styleform.css" />
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+  
+    
+    <script src="angular.min.js"></script>
+     <script src="angular-route.js"></script>
+  
+   
+</head>
+<body ng-app="myApp">
+<div class="container" ng-controller="Ctrl">
+    
+    <div class="row row1">
+      <form  name="frm" method="POST" ng-submit="frm.$valid" novalidate  >
+   
+            <div class="row ">
+              <div class="col-md-5">
+                    <input type="number" class="form-control" name="num" ng-model="numc" placeholder="le numéro de la carte nationale" required>
+                    <span class="error" ng-show="frm.num.$dirty && frm.num.$error.required">entrer le nom svp!!</span>
+                   
+                </div>
+                <div class="col-md-5">
+                    <input type="text" class="form-control" name="nom" ng-model="nom"  placeholder="nom" required>
+                    <span class="error" ng-show="frm.nom.$dirty && frm.nom.$error.required">entrer le nom svp!!</span>
+                </div>
+                <div class="col-md-5">
+                    <input type="text" class="form-control" name="pr" ng-model="prenom"  placeholder="prénom" required>
+                    <span class="error" ng-show="frm.prenom.$dirty && frm.prenom.$error.required">entrer le nom svp!!</span>
+                </div>
+                <div class="col-md-5">
+                    <input type="number" class="form-control" name="tel" ng-model="tel" placeholder="le numéro téléphone" required>
+                    <span class="error" ng-show="frm.tel.$dirty && frm.tel.$error.required">entrer le nom svp!!</span>
+                </div>
+                <div class="col-md-5">
+                    <input type="email" class="form-control" name="Email" ng-model="email"  placeholder="E-mail" required>
+                    <span class="error" ng-show="frm.Email.$dirty && frm.Email.$error.required">*Required</span>
+                <span class="error" ng-show="!frm.Email.$error.required && frm.Email.$invalid">*Invalid Email Address</span>
+                </div>
+                <div class="col-md-5" >
+                <select name="tutr" ng-model="tit" ng class="form-control" required title="titulair" >
+                    <option value="" disabled selected>titulaire</option>
+                    <option value="1">oui</option>
+                    <option value="2">no</option>
+                    
+                </select>
+              <!--<span class="msg" ng-show="frm.tutr.$error.required">Sélectionner une valeur svp!!</span>-->
+           
+              </div> 
+            <div class="col-md-5" >
+            <select class="form-control" ng-model="ecoa" data-ng-options="x as x.nom for x in ecole" required>
+              <option value="">école actuelle </option>
+                    </select>
+                  <!--  <span class="msg" ng-show="frm.ecol.$error.required">Sélectionner une valeur svp!!</span>-->
+            </div>
+         
+    </div>
+    <div class="container" style="margin-top: 50px;margin-left:80px;">
+     <h5 style="font-weight: bold; color: white;">choisir niveau:</h5>
+   
+        <div class="form-check-inline" ng-repeat="nev in niveau">
+          <label class="form-check-label form-control" style="margin-left: 10px;">
+         
+         <input type="checkbox" value="{{nev.id}}" 
+         class="form-check-input" 
+         ng-required="checkedniveau.length==0"  
+         
+         ng-checked="checkedniveau.indexOf(nev) > -1" 
+         ng-click="Checknev(nev)"
+         >
+            {{nev.etape}} 
+          
+         
+          </label>
+         
+        </div>
+   </div>
+    <div class="container" style="margin-top: 50px;margin-left:80px;">
+
+        <h5 style="font-weight: bold;color: white;">specialite:</h5>
+       
+            <div class="form-check-inline" ng-repeat="mods in module">
+              <label class="form-check-label form-control" style="margin-left: 10px;">
+                <input type="checkbox" 
+              
+                ng-model="mod" class="form-check-input"
+                ng-required="checkedmod.length==0" 
+                ng-checked="checkedmod.indexOf(mods) > -1"
+                 ng-click="Checkmod(mods)"
+               >
+                {{mods.mod}}
+              </label>
+            
+            </div>
+           <!-- <span class="msg" ng-show="frm.md.$error.required">Sélectionner une valeur svp!!</span> -->
+         
+        <a href=""><input  ng-disabled="frm.$invalid" class="btn btn-info" type="submit" ng-click="insertData()" value="ENVOYER"></a>
+         
+
+</div>
+
+       
+
+<div >
+
+</form>
+</div>
+
+</div>
+<script>
+
+    </script>
+    
+
+</body>
+</html>

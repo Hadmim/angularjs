@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+ <head>
+  <title>école</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+  <link href="fonts/css.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="stylesheet" type="text/css" href="styleform.css" />
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+  
+    
+    <script src="angular.min.js"></script>
+     <script src="angular-route.js"></script>
+ </head>
+ <body ng-app='myApp'>
+
+  <div class="row h-100 justify-content-center align-items-center" style="margin-top:60px;" ng-controller="Ctrl">
+ 
+    <table width="100%" class="table table-striped table-bordered table-hover">
+        <thead style="background-color: #424a5d; color: #ffffff">
+      <tr>
+        <th >le nom de l'école</th>
+        <th >Localisation</th>
+       
+      </tr>
+    </thead>
+      <!-- Display records -->
+      <tbody style="color: black; font-weight: bold;font-size: 1.3em;">
+      <tr ng-repeat="eco in ecole">
+        <td >{{eco.nom}}</td>
+        <td >{{eco.daira}}</td>
+       
+      </tr>
+    </tbody>
+    </table>
+  </div>
+  <script>
+   
+    
+    </script>
+    
+ 
+ </body>
+</html>
